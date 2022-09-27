@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.matrix</groupId>
+    <artifactId>dubbo-demo-xml</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <description>dubbo基于xml的案例说明</description>
+
+    <properties>
+        <!-- spring verison -->
+        <spring.version>5.3.23</spring.version>
+        <!-- dubbo version -->
+        <dubbo.version>3.1.0</dubbo.version>
+        <!-- slf4j version -->
+        <slf4j.version>2.0.2</slf4j.version>
+        <!-- nacos client version -->
+        <nacos-client.version>2.1.1</nacos-client.version>
+        <!-- dubbo registry nacos version -->
+        <dubbo-registry-nacos.version>3.1.0</dubbo-registry-nacos.version>
+    </properties>
+
+    <modules>
+        <module>dubbo-demo-xml-provider</module>
+        <module>dubbo-demo-xml-consumer</module>
+    </modules>
+
+    <dependencies>
+        <!-- spring webmvc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <!-- apache dubbo -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>${dubbo.version}</version>
+        </dependency>
+        <!-- slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <!-- nacos client -->
+        <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>nacos-client</artifactId>
+            <version>${nacos-client.version}</version>
+        </dependency>
+        <!-- dubbo registry nacos -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-registry-nacos</artifactId>
+            <version>${dubbo-registry-nacos.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>

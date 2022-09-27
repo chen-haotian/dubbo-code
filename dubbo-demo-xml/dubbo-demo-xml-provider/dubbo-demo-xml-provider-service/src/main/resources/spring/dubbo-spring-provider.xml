@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <!-- 配置服务名称 -->
+    <dubbo:application name="dubbo-demo-provider"/>
+    <!-- 配置dubbo使用的注册中心的地址 -->
+    <dubbo:registry id="nacos" address="nacos://127.0.0.1:8848" check="false"/>
+    <!-- 配置使用的协议 -->
+    <dubbo:protocol name="dubbo" port="-1"/>
+    <!-- 配置业务bean -->
+    <bean id="helloService" class="com.matrix.service.impl.HelloServiceImpl"></bean>
+    <!-- dubbo 发布服务 -->
+    <dubbo:service interface="com.matrix.service.HelloService" version="v1.0.0" ref="helloService" delay="5000" timeout="3000" protocol="dubbo"/>
+</beans>
