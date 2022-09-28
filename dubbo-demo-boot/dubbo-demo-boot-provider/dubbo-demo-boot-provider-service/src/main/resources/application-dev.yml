@@ -1,0 +1,18 @@
+server:
+  # 服务端口
+  port: 8091
+
+# dubbo相关配置
+dubbo:
+  # 注册中心配置
+  registry:
+    # 注册中心地址
+    address: nacos://127.0.0.1:8848
+    # 连接注册中心超时时间【单位毫秒】
+    timeout: 3000
+  # dubbo使用的协议配置
+  protocol:
+    # 使用协议的名称
+    name: dubbo
+    # 使用的传输端口，默认是20880【设置-1表示使用随机端口】
+    port: -1

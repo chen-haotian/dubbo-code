@@ -1,0 +1,8 @@
+spring:
+  application:
+    # 服务名称
+    name: dubbo-demo-boot-consumer
+  # 用于加载不同环境下的配置文件
+  profiles:
+    # 用于指定加载某个环境的配置文件
+    active: dev

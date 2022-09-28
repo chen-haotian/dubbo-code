@@ -3,52 +3,43 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.matrix</groupId>
-    <artifactId>dubbo-demo-xml</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <description>dubbo基于xml的案例说明</description>
 
     <modules>
-        <module>dubbo-demo-xml-provider</module>
-        <module>dubbo-demo-xml-consumer</module>
+        <module>dubbo-demo-boot-consumer</module>
+        <module>dubbo-demo-boot-provider</module>
     </modules>
 
+    <!-- parent -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.4</version>
+    </parent>
+
+    <groupId>com.matrix</groupId>
+    <artifactId>dubbo-demo-boot</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <description>基于springboot应用程序的方式集成dubbo</description>
+
     <properties>
-        <!-- spring verison -->
-        <spring.version>5.3.23</spring.version>
         <!-- dubbo version -->
         <dubbo.version>3.1.0</dubbo.version>
-        <!-- slf4j version -->
-        <slf4j.version>2.0.2</slf4j.version>
         <!-- nacos client version -->
         <nacos-client.version>2.1.1</nacos-client.version>
     </properties>
 
     <dependencies>
-        <!-- spring webmvc -->
+        <!-- web starter -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- apache dubbo -->
+        <!-- dubbo boot starter -->
         <dependency>
             <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo</artifactId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
             <version>${dubbo.version}</version>
-        </dependency>
-        <!-- slf4j -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
         </dependency>
         <!-- nacos client -->
         <dependency>
