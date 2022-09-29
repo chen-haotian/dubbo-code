@@ -15,6 +15,6 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public String sayHello(String name) {
-        return "Hello " + name + ", response from provider: " + RpcContext.getServiceContext().getLocalAddress();
+        return "Hello " + name + ", response from provider: " + RpcContext.getContext().getLocalAddress();
     }
 }

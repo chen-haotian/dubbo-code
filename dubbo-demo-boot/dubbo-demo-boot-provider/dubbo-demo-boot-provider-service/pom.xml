@@ -12,12 +12,23 @@
     <artifactId>dubbo-demo-boot-provider-service</artifactId>
     <description>服务提供者具体实现服务</description>
 
+    <properties>
+        <!-- dubbo hessian2 version -->
+        <dubbo-serialization-hessian2.version>3.1.0</dubbo-serialization-hessian2.version>
+    </properties>
+
     <dependencies>
         <!-- provider api -->
         <dependency>
             <groupId>com.matrix</groupId>
             <artifactId>dubbo-demo-boot-provider-api</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- dubbo hessian2 -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-serialization-hessian2</artifactId>
+            <version>${dubbo-serialization-hessian2.version}</version>
         </dependency>
     </dependencies>
 </project>

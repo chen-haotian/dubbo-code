@@ -10,9 +10,16 @@ dubbo:
     address: nacos://127.0.0.1:8848
     # 连接注册中心超时时间【单位毫秒】
     timeout: 3000
+    # 所在的命名空间
+    group: dubbo-boot
+    parameters:
+      username: nacos
+      password: nacos
   # dubbo使用的协议配置
   protocol:
     # 使用协议的名称
     name: dubbo
     # 使用的传输端口，默认是20880【设置-1表示使用随机端口】
     port: -1
+    # 序列化使用的协议
+    serialization: hessian2
