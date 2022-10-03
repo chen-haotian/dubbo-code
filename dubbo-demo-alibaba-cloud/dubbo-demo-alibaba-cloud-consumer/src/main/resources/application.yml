@@ -1,0 +1,8 @@
+spring:
+  # 应用相关配置
+  application:
+    name: dubbo-demo-alibaba-cloud-consumer
+  # profiles用于加载多环境不同的配置
+  profiles:
+    # 用于指定加载哪个环境的配置文件，这里选择是加载dev后缀的配置文件
+    active: dev

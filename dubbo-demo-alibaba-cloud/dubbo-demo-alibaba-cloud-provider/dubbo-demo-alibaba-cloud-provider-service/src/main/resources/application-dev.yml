@@ -1,0 +1,34 @@
+server:
+  # 应用使用的端口号
+  port: 8091
+
+spring:
+  main:
+    allow-circular-references: true
+  cloud:
+    # nacos相关配置
+    nacos:
+      # 注册中心配置
+      discovery:
+        # 注册中心使用的地址
+        server-addr: 127.0.0.1:8848
+
+dubbo:
+  # 扫描配置
+  scan:
+    # 需要扫描的包用于使dubbo的原生注解生效
+    base-packages: com.matrix.cloud.service.impl
+  # 协议相关配置
+  protocol:
+    # 使用协议的名称
+    name: dubbo
+    # 使用的传输端口，默认是20880【设置-1表示使用随机端口】
+    port: -1
+    # 序列化使用的协议
+    serialization: kryo
+  # 注册中心配置
+  registry:
+    # 注册中心地址
+    address: spring-cloud://127.0.0.1:8848
+    # 连接注册中心超时时间【单位毫秒】
+    timeout: 3000

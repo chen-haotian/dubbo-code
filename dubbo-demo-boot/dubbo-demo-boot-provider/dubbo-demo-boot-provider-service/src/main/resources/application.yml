@@ -4,5 +4,5 @@ spring:
     name: dubbo-demo-boot-provider
   # 用于加载不同环境下的配置文件
   profiles:
-    # 加载dev环境
+    # 用于指定加载的环境，这里加载dev环境
     active: dev
